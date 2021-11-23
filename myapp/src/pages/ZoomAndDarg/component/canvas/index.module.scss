@@ -1,0 +1,21 @@
+.imgArea {
+  position: relative;
+  width: 466px;
+  height: 326px;
+  margin: auto;
+  border: 1px solid #da2727;
+  overflow: hidden;
+  & > img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: move;
+  }
+  .label {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #da2727;
+  }
+}

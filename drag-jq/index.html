@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/spark-md5/3.0.0/spark-md5.js"></script>
+</head>
+<body>
+  <div id="drag-show">
+    <span class="title">图片展示区：</span>
+    <span class="show-area"></span>
+  </div>
+  <!-- 图片拖拽区 -->
+  <div id="drag-area" contentEditable="true" ondragenter="imgDrag(this, event);" ondragover="imgDrag(this, event);" ondrop="dragUpload(this, event)" onpaste="pasteUpload(this, event);" onmouseenter="handleMouseEnter(this)" onmouseleave="handleMouseLeave(this)">
+    <span class="over"></span>
+    <span class="text">将图片拖拽至此处上传</span>
+    <div class="upload-box">
+      <input type="file" name="file" multiple="multiple" id="file" style="display: none;" onchange="fileChange(this, event);"/>
+      <span id="upload" onclick="uploadFile()"></span>
+    </div>
+  </div>
+  <!-- 脚本 -->
+  <script src="./index.js"></script>
+</body>
+</html>
